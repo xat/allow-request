@@ -1,0 +1,39 @@
+{
+  "name": "allow-request",
+  "version": "0.1.0",
+  "description": "whitelist certain http routes",
+  "main": "allow-request.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xat/allow-request.js"
+  },
+  "keywords": [
+    "request",
+    "filter",
+    "allow",
+    "deny"
+  ],
+  "author": {
+    "name": "Simon Kusterer",
+    "email": "simon@sope.io",
+    "url": "http://sope.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xat/allow-request.js/issues"
+  },
+  "homepage": "https://github.com/xat/allow-request.js",
+  "devDependencies": {
+    "expect.js": "~0.3.1"
+  },
+  "dependencies": {
+    "path-to-regexp": "~0.1.2",
+    "methods": "~0.1.0"
+  }
+}
