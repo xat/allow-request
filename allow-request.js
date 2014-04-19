@@ -48,7 +48,7 @@ var AllowRequest = function() {
             len = filters.length,
             c = 0;
 
-        fn = fn || noop;
+        fn || (fn = noop);
 
         done = function(passed) {
             if (passed) return fn(true);

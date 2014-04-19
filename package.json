@@ -1,6 +1,6 @@
 {
   "name": "allow-request",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "whitelist certain http routes",
   "main": "allow-request.js",
   "directories": {
