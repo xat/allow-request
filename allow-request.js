@@ -29,7 +29,7 @@ var AllowRequest = function() {
     execFilter = function(filter, req, pathname, done) {
         var args;
 
-        if (filter.method && filter.method !== req.method) return done(false);
+        if (filter.method && req.method && filter.method !== req.method.toLowerCase()) return done(false);
         if (!(args = filter.route.exec(pathname))) return done(false);
         if (typeof filter.fn !== 'function') return done(true);
 
