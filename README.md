@@ -28,7 +28,7 @@ whitelist.post('/blog/comment');
 // Notice that you are able to use any routes that you would
 // also be able to use in express (including RegEX) since
 // we are using the same route-to-regex converter.
-whitelist.get('/user/:id', function(id, pathname, req, pass) {
+whitelist.get('/user/:id', function(pass, req, pathname, id) {
     // Handing 'true' in as first parameter to 'pass' says
     // that the route is allow.
     pass([3, 7, 8].indexOf(id) !== -1);

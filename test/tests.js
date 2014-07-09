@@ -14,9 +14,12 @@ describe('allow-request', function() {
 
        var checker = allowRequest()
            .get('/user/:id')
+           .put('/:ns/*', function(pass, req, pathname, ns) {
+              pass(true);
+           })
            .post('/')
            .route('put', '/posts')
-           .get('/backend/:id', function(id, pathname, req, pass) {
+           .get('/backend/:id', function(pass, req, pathname, id) {
                pass(true);
            });
 
@@ -27,6 +30,7 @@ describe('allow-request', function() {
        checker.check({ url: '/', method: 'post' }, expecter(true));
        checker.check({ url: '/posts', method: 'put' }, expecter(true));
        checker.check({ url: '/backend/2', method: 'get' }, expecter(true));
+       checker.check({ url: '/cto/blubb', method: 'put' }, expecter(true));
 
    });
 
