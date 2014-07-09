@@ -34,7 +34,7 @@ var AllowRequest = function() {
         if (typeof filter.fn !== 'function') return done(true);
 
         args = args.slice(1);
-        args.unshift(done, req, pathname, req);
+        args.unshift(done, req, pathname);
         filter.fn.apply(filter.fn, args);
     };
 
